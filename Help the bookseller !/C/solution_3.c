@@ -8,11 +8,11 @@ char *stockSummary(
     if (nb_books == 0 || nb_categories == 0) {
         return strdup("");
     }
-    int quantities['Z' + 1] = {0};
+    int stocks['Z' + 1] = {0};
     for (size_t i = 0; i < nb_books; i++) {
         const char *book = books[i];
         int quantity = atoi(strchr(book, ' ') + 1);
-        quantities[(int) book[0]] += quantity;
+        stocks[(int) book[0]] += quantity;
     }
     char *result = malloc(nb_categories * 20 * sizeof(char));
     size_t result_len = 0;
@@ -22,7 +22,7 @@ char *stockSummary(
             result[result_len++] = '-';
             result[result_len++] = ' ';
         }
-        int quantity = quantities[(int) categories[i][0]];
+        int quantity = stocks[(int) categories[i][0]];
         result_len += sprintf(result + result_len, "(%c : %d)", categories[i][0], quantity);
     }
     result[result_len] = '\0';

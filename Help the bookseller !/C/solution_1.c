@@ -8,17 +8,17 @@ char *stockSummary(
     if (nb_books == 0 || nb_categories == 0) {
         return strdup("");
     }
-    int quantities['Z' + 1] = {0};
+    int stocks['Z' + 1] = {0};
     for (size_t i = 0; i < nb_books; i++) {
         const char *book = books[i];
         const size_t position = strcspn(book, " ") + 1;
-        quantities[book[0]] += atoi(book + position);
+        stocks[book[0]] += atoi(book + position);
     }
     char *result = NULL;
     for (size_t i = 0; i < nb_categories; i++) {
         char *category = categories[i];
         char buffer[50];
-        int length = sprintf(buffer, "(%c : %d)", category[0], quantities[category[0]]);
+        int length = sprintf(buffer, "(%c : %d)", category[0], stocks[category[0]]);
         if (result == NULL) {
             result = calloc(length + 1, sizeof(char));
             strcpy(result, buffer);
