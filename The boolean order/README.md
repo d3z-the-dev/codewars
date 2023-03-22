@@ -1,4 +1,4 @@
-# The boolean order
+# [The boolean order](https://www.codewars.com/kata/59eb1e4a0863c7ff7e000008)
 
 In this Kata, you will be given boolean values and boolean operators. Your task will be to return the number of arrangements that evaluate to `True`.
 

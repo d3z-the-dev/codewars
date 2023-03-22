@@ -1,4 +1,4 @@
-# How many numbers III?
+# [How many numbers III?](https://www.codewars.com/kata/5877e7d568909e5ff90017e6)
 
 We want to generate all the numbers of three digits where:
 
