@@ -1,7 +1,5 @@
 # [The smallest n such that n^n mod m = 0](https://www.codewars.com/kata/638b4205f418c4ab857f2692)
 
-#### Description:
-
 You have a natural number `m`.
 
 You need to write a function `f(m)` which finds the smallest positive number `n` such that
