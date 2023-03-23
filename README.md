@@ -8,3 +8,5 @@
 ### [Find Multiples of a Number](https://github.com/d3z-the-dev/codewars/tree/master/Find%20Multiples%20of%20a%20Number)
 
 ### [Help the bookseller !](https://github.com/d3z-the-dev/codewars/tree/master/Help%20the%20bookseller%20%21)
+
+### [The smallest n such that n^n mod m = 0](https://github.com/d3z-the-dev/codewars/tree/master/The+smallest+n+such+that+n%5En+mod+m+%3D+0)
