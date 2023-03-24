@@ -2,28 +2,23 @@ import math
 import random
 
 
-def is_prime(n: int, k=5) -> bool:
-    if n < 2:
-        return False
-    if n in [2, 3]:
-        return True
-    if n % 2 == 0:
-        return False    
-    r, d = 0, n - 1
-    while d % 2 == 0:
-        d //= 2
-        r += 1
-    for i in range(k):
+def is_prime(n: int) -> bool:
+    if n < 2: return False
+    if n in [2, 3]: return True
+    if n % 2 == 0: return False    
+    k, r, d = 5, 0, n - 1
+    while d % 2 == 0: d //= 2; r += 1
+    while k >= 1:
+        k -= 1
         a = random.randint(2, n - 2)
         x = pow(a, d, n)
-        if x == 1 or x == n - 1:
-            continue
-        for j in range(r - 1):
+        if x == 1 or x == n - 1: continue
+        m = r - 1
+        while m >= 1:
+            m -= 1
             x = pow(x, 2, n)
-            if x == n - 1:
-                break
-        else:
-            return False
+            if x == n - 1: break
+        else: return False
     return True
 
 def rho(n: int) -> int:
@@ -39,16 +34,16 @@ def rho(n: int) -> int:
 
 def factor(n: int) -> set:
     if n <= 1: return {*()}
-    if is_prime(n): return {n}
-    r = n
+    elif is_prime(n): return {n}
+    else: r = n
     while r == n: r = rho(n)
     while n % r == 0: n //= r
     return factor(r) | factor(n)
 
 def f(m: int) -> int:
     n, i = 0, 1
-    for p in factor(m):
-        i *= p
+    f = factor(m)
+    while f: i *= f.pop()
     while True:
         n += i
         if pow(n, n, m) == 0: return n
