@@ -7,3 +7,5 @@
 ### [The smallest n such that n^n mod m = 0](https://github.com/d3z-the-dev/codewars/tree/master/The%20smallest%20n%20such%20that%20n%5En%20mod%20m%20%3D%200)
 ### [Simpler Interactive interpreter](https://github.com/d3z-the-dev/codewars/tree/master/Simpler%20Interactive%20Interpreter)
 ### [Rotate for a Max](https://github.com/d3z-the-dev/codewars/tree/master/Rotate%20for%20a%20Max)
+### [Roman Numerals Helper](https://github.com/d3z-the-dev/codewars/tree/master/Roman%20Numerals%20Helper)
+### []()
