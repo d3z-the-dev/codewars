@@ -21,5 +21,5 @@ Write `function max_rot(n)` which given a positive integer `n` returns the maxim
 
 So `max_rot` (or `maxRot` or ... depending on the language) is such as:
 
-- max_rot(56789) should return 68957
-- max_rot(38458215) should return 85821534
+- `max_rot(56789)` should return `68957`
+- `max_rot(38458215)` should return `85821534`
